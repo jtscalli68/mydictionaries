@@ -18,7 +18,7 @@ room-number,use,sq-ft,price
 
 
 
-datastore = { "medical":[
+datastore = { "medical":[   #has one key = medical which is a list of dictionaries 
       { "room-number": 100,
         "use": "reception",
         "sq-ft": 50,
@@ -47,3 +47,11 @@ datastore = { "medical":[
 
       ]
 }
+
+
+outfile = open('retail_space2.csv','w') #2 for now until we know it works
+outfile.write('room-number, use, sq-ft,price\n')
+
+
+for i in datastore['medical']:
+  outfile.write(str(i['room-number']) + ',' + i['use'] + ',' + str(i['sq-ft']) + ',' + str(i['price']) + '\n')  #you cannot write int's to a csv file, so you must convert the entrys that are not strings to strings

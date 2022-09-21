@@ -104,15 +104,15 @@ print()
 print('*****  start section 5 - iterate through keys, values, items ********')
 print()
 
-for k in phonebook:
-    print(k)  #the defalt option to iterate through a dictionary is to itterate through the keys, there is a different command for the value
-    print(phonebook[k]) #this will iterate through the values 
+# for k in phonebook:
+#     print(k)  #the defalt option to iterate through a dictionary is to itterate through the keys, there is a different command for the value
+#     print(phonebook[k]) #this will iterate through the values 
 
-for value in phonebook.values():
-    print(value)
+# for value in phonebook.values():
+#     print(value)
 
-#for k,v in phonebook.items: 
-  #  print('Key', k, '   value', v)
+for k,v in phonebook.items(): 
+   print('Key', k, '   value', v)
 
 #for tuple in phonebook.items:
   #  print(tuple)
